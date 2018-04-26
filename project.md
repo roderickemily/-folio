@@ -9,7 +9,7 @@ permalink: /project/
 {% if project.redirect %}
 <div class="project">
     <div class="thumbnail">
-        <a href="{{ works.redirect }}" target="_blank">
+        <a href="{{ project.redirect }}" target="_blank">
         {% if project.img %}
         <img class="thumbnail" src="{{ project.img }}"/>
         {% else %}

@@ -1,15 +1,15 @@
 ---
 layout: page
-title: portfolio
-permalink: /portfolio/
+title: works
+permalink: /works/
 ---
 
-{% for project in site.portfolio %}
+{% for works in site.works %}
 
-{% if project.redirect %}
-<div class="project">
+{% if works.redirect %}
+<div class="works">
     <div class="thumbnail">
-        <a href="{{ project.redirect }}" target="_blank">
+        <a href="{{ works.redirect }}" target="_blank">
         {% if project.img %}
         <img class="thumbnail" src="{{ project.img }}"/>
         {% else %}
@@ -25,18 +25,18 @@ permalink: /portfolio/
 </div>
 {% else %}
 
-<div class="project ">
+<div class="works ">
     <div class="thumbnail">
-        <a href="{{ site.baseurl }}{{ project.url }}">
+        <a href="{{ site.baseurl }}{{ works.url }}">
         {% if project.img %}
-        <img class="thumbnail" src="{{ project.img }}"/>
+        <img class="thumbnail" src="{{ works.img }}"/>
         {% else %}
         <div class="thumbnail blankbox"></div>
         {% endif %}    
         <span>
-            <h1>{{ project.title }}</h1>
+            <h1>{{ works.title }}</h1>
             <br/>
-            <p>{{ project.description }}</p>
+            <p>{{ works.description }}</p>
         </span>
         </a>
     </div>
